@@ -1,5 +1,5 @@
 """Class-based Flask app configuration."""
-from os import environ, path
+from os import environ, path, urandom
 
 from dotenv import load_dotenv
 
@@ -9,10 +9,12 @@ load_dotenv(path.join(basedir, ".env"))
 
 class Config:
     """Configuration from environment variables."""
+    def __init__(self):
+       logging.basicConfig(level=logging.DEBUG)
 
-    SECRET_KEY = environ.get("SECRET_KEY")
+    SECRET_KEY = environ.get("SECRET_KEY", default=urandom(16))
     FLASK_ENV = environ.get("FLASK_ENV")
-    FLASK_APP = "app.py"
+    FLASK_APP = "zmoodapi.py"
 
 class ProdConfig(Config):
     FLASK_ENV = 'production'
