@@ -1,0 +1,13 @@
+[Unit]
+Description=ZmoodAPI Service
+After=network.target bouncy_pixel_service.service
+
+[Service]
+User=root
+WorkingDirectory=/home/pi/zmoodapi
+ExecStart=python3 /home/pi/zmoodapi/zmoodapi.py
+ 
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
