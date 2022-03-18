@@ -1,8 +1,10 @@
 import os
 import json
 from flask import Flask, jsonify, abort, make_response, request, render_template
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Opening JSON file
 f = open('lights.json',)
@@ -86,4 +88,4 @@ def not_found(error):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',ssl_context=('zmoodapi_cert.pem', 'zmoodapi_key.pem'))

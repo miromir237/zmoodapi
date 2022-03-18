@@ -1,5 +1,5 @@
 async function getLights() {
-    let url = 'http://zmood.local:5000/api/lights';
+    let url = 'https://zmood.local:5000/api/lights';
     try {
         let res = await fetch(url);
         return await res.json();
@@ -11,7 +11,7 @@ async function getLights() {
 async function setLightsOn() {
     var x = document.getElementById("myLights").selectedIndex;
     var id = document.getElementsByTagName("option")[x].value;
-    let url = 'http://zmood.local:5000/api/lights/on/' + id;
+    let url = 'https://zmood.local:5000/api/lights/on/' + id;
     try {
         let res = await fetch(url);
         return await res.json();
@@ -23,7 +23,7 @@ async function setLightsOn() {
 async function setLightsOff() {
     var x = document.getElementById("myLights").selectedIndex;
     var id = document.getElementsByTagName("option")[x].value;
-    let url = 'http://zmood.local:5000/api/lights/off/' + id;
+    let url = 'https://zmood.local:5000/api/lights/off/' + id;
     try {
         let res = await fetch(url);
         return await res.json();
