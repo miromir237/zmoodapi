@@ -1,6 +1,6 @@
 [ 
-    {"id": 1, "state": 0, "name": "Bouncy pixels", "service_name": "bouncy_pixel_service.service", "description": "Lights are flowing through the HAT and bouncing from it's margins."},
-    {"id": 2, "state": 0, "name": "Matrix", "service_name": "matrix_service.service", "description": "Lights are flowing through the HAT in Matrix fasion."},
-    {"id": 3, "state": 0, "name": "Rainbow", "service_name": "rainbow_service.service", "description": "Lights are flowing through the HAT in rainbow patterns."},
+    {"id": 1, "state": 0, "name": "Bouncy pixels", "service_name": "bouncy_pixel.service", "description": "Lights are flowing through the HAT and bouncing from it's margins."},
+    {"id": 2, "state": 0, "name": "Matrix", "service_name": "matrix.service", "description": "Lights are flowing through the HAT in Matrix fasion."},
+    {"id": 3, "state": 0, "name": "Rainbow", "service_name": "rainbow.service", "description": "Lights are flowing through the HAT in rainbow patterns."},
     {"id": 4, "state": 0, "name": "Binary clock", "service_name": "binary_clock.service", "description": "Binary clock."} 
 ]
